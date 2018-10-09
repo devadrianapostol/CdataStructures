@@ -7,7 +7,7 @@ typedef struct node {
 } node;
 
 /*
-    push an element into stack
+    enqueue an element into stack
 */
 node* push(node *head, int data){
     node* temp = malloc(sizeof(node));
@@ -54,7 +54,7 @@ int main(){
     /*head = push(head, 5);
     head = push(head, 10);
     head = push(head, 20);
-    head = push(head, 30);*/
+    head = enqueue(head, 30);*/
     display(head);
 
     return 0;

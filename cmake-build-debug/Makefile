@@ -123,32 +123,32 @@ C/fast:
 	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/build
 .PHONY : C/fast
 
-stack-linkedlist.o: stack-linkedlist.c.o
+queue.o: queue.c.o
 
-.PHONY : stack-linkedlist.o
+.PHONY : queue.o
 
 # target to build an object file
-stack-linkedlist.c.o:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/stack-linkedlist.c.o
-.PHONY : stack-linkedlist.c.o
+queue.c.o:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/queue.c.o
+.PHONY : queue.c.o
 
-stack-linkedlist.i: stack-linkedlist.c.i
+queue.i: queue.c.i
 
-.PHONY : stack-linkedlist.i
+.PHONY : queue.i
 
 # target to preprocess a source file
-stack-linkedlist.c.i:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/stack-linkedlist.c.i
-.PHONY : stack-linkedlist.c.i
+queue.c.i:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/queue.c.i
+.PHONY : queue.c.i
 
-stack-linkedlist.s: stack-linkedlist.c.s
+queue.s: queue.c.s
 
-.PHONY : stack-linkedlist.s
+.PHONY : queue.s
 
 # target to generate assembly for a file
-stack-linkedlist.c.s:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/stack-linkedlist.c.s
-.PHONY : stack-linkedlist.c.s
+queue.c.s:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/queue.c.s
+.PHONY : queue.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C"
-	@echo "... stack-linkedlist.o"
-	@echo "... stack-linkedlist.i"
-	@echo "... stack-linkedlist.s"
+	@echo "... queue.o"
+	@echo "... queue.i"
+	@echo "... queue.s"
 .PHONY : help
 
 

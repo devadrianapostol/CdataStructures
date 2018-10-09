@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/C.dir/queue.c.o  -o C 
+/usr/bin/cc -g   CMakeFiles/C.dir/linkedlist.c.o  -o C 

@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ady/DataStructures/C/queue.c">
+		<Unit filename="/home/ady/DataStructures/C/linkedlist.c">
 			<Option target="C"/>
 		</Unit>
 		<Unit filename="/home/ady/DataStructures/C/CMakeLists.txt">

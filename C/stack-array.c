@@ -30,6 +30,10 @@ int empty(int* top){
     return *top == 0 ? 1 : 0;
 }
 
+int top(int* stack, int *top){
+    return stack[*top];
+}
+
 int main() {
     int stack[MAX];
     int top,elem;

@@ -9,11 +9,29 @@ typedef struct node {
     struct node* next;
 } node;
 
-node *create(int data, void *next);
+node* create(int data, void *next);
 
-node *push(node *pNode, int data);
+node* push(node *pNode, int data);
+
+node* prepend(node* pNode, int data);
 
 void display(node **pNode);
+
+node *append(node *pNode, int data);
+
+typedef void (*callback)(node* data);
+
+void traverse(node* head, callback f);
+
+int count(node *pNode);
+
+callback printF(node* curr){
+    printf("%d\n", curr->data);
+}
+
+node* insert_after(node* head, int data, node* prev);
+
+node * getNode(node **pNode, int i);
 
 int main(){
     node* head = create(10, NULL);
@@ -21,10 +39,52 @@ int main(){
     head = push(head, 1000 );
     head = push(head, 1001 );
     head = push(head, 1002 );
+    head = prepend(head, 1005);
     head = push(head, 1003 );
+    head = append(head, 19999);
+    head = insert_after(head, 2, getNode(&head, 1));
+    head = append(head, 5000);
 
-    display(&head);
+    //display(&head);
+    traverse(head, (callback) printF);
+    printf("Nr of nodes: %d", count(head));
     return 0;
+}
+
+node* getNode(node **pNode, int i) {
+    node* curr = *pNode;
+    int c = 0;
+    while (curr != NULL){
+        if(c == i-1){
+            return curr;
+        }
+        c++;
+        curr = curr->next;
+    }
+    return NULL;
+}
+
+int count(node *pNode) {
+    node* curr = pNode;
+    int c = 0;
+    while (curr != NULL){
+        c++;
+        curr = curr->next;
+    }
+    return c;
+}
+
+node *append(node *pNode, int data) {
+    node* curr = pNode;
+    while (curr != NULL){
+        if(curr->next == NULL){
+            node* tmp= create(data, NULL);
+            curr->next = tmp;
+            break;
+        }
+        curr = curr->next;
+    }
+    return pNode;
 }
 
 void display(node **pNode) {
@@ -35,7 +95,7 @@ void display(node **pNode) {
     }
 }
 
-node *push(node *pNode, int data) {
+node* push(node *pNode, int data) {
     node* tmp = create(data, NULL);
     node* curr = pNode;
 
@@ -50,7 +110,7 @@ node *push(node *pNode, int data) {
     return pNode;
 }
 
-node *create(int data, void *next) {
+node* create(int data, void *next) {
     node* tmp = malloc(sizeof(node));
     if(tmp == NULL){
         printf("Could not create new node");
@@ -60,3 +120,28 @@ node *create(int data, void *next) {
     return tmp;
 }
 
+node* prepend(node* pNode, int data){
+    node* temp = create(data, pNode);
+    pNode = temp;
+    return pNode;
+}
+
+void traverse(node* head, callback f){
+    node* curr = head;
+    while (curr != NULL){
+        f(curr);
+        curr = curr->next;
+    }
+}
+
+node* insert_after(node* head, int data, node* prev){
+    node* curr = head;
+    while (curr != NULL){
+        if(curr == prev){
+            node* tmp = create(data, curr->next);
+            curr->next = tmp;
+        }
+        curr = curr->next;
+    }
+    return head;
+}

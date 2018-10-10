@@ -36,7 +36,6 @@ void display(node* head){
         printf("%d\n", curr->data);
         curr=curr->next;
     }
-
 }
 
 void init(node* head){

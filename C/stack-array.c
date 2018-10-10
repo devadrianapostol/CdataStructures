@@ -52,7 +52,5 @@ int main() {
     display(stack,&top);
     full(&top, MAX) == 1 ? printf("Full\n") : printf("Not full\n");
 
-
-
     return 0;
 }

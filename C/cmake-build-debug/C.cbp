@@ -81,6 +81,9 @@
 		<Unit filename="/home/ady/DataStructures/C/linkedlist.c">
 			<Option target="C"/>
 		</Unit>
+		<Unit filename="/home/ady/DataStructures/C/linkedlist.h">
+			<Option target="C"/>
+		</Unit>
 		<Unit filename="/home/ady/DataStructures/C/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

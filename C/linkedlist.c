@@ -3,44 +3,18 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct node {
-    int data;
-    struct node* next;
-} node;
-
-node* create(int data, void *next);
-
-node* push(node *pNode, int data);
-
-node* prepend(node* pNode, int data);
-
-void display(node **pNode);
-
-node *append(node *pNode, int data);
-
-typedef void (*callback)(node* data, int index);
-
-void traverse(node* head, callback f);
-
-int count(node *pNode);
+#include "linkedlist.h"
 
 callback printF(node* curr, int index){
     printf("Node %d: %d\n", index, curr->data);
 }
 
-node* insert_after(node* head, int data, node* prev);
-
-node* insert_before(node* head, int data, node* prev);
-
-node * getNode(node **pNode, int i);
-
 int main(){
     node* head = create(10, NULL);
     head = push(head, 100 );
     head = push(head, 1000 );
-    head = push(head, 1001 );
     head = push(head, 1002 );
+    head = push(head, 1001 );
     head = prepend(head, 1005);
     head = push(head, 1003 );
     head = append(head, 19999);
@@ -50,6 +24,11 @@ int main(){
 
     traverse(head, (callback) printF);
     printf("Nr of nodes: %d\n", count(head));
+
+    //printf("Search for %d: %d", 1003, search(&head, 1003)->data );
+    head = insertion_sort(head);
+    traverse(head, (callback) printF);
+
     return 0;
 }
 
@@ -151,18 +130,64 @@ node* insert_after(node* head, int data, node* prev){
 
 node* insert_before(node* head, int data, node* prev){
     node* curr = head;
-    node* pre;
     if(prev == head){
         return prepend(head, data);
     }
     while (curr != NULL){
-        pre = curr;
-        curr = curr->next;
-        if(curr == prev){
+        if(curr->next == prev){
             node* temp = create(data, prev);
-            pre->next = temp;
+            curr->next = temp;
             break;
         }
+        curr = curr->next;
     }
+    return head;
+}
+
+node* search(node** head, int data){
+    node* curr = *head;
+    while (curr != NULL){
+        if(curr->data == data){
+            return curr;
+        }
+        curr = curr->next;
+    }
+    return NULL;
+}
+
+node * insertion_sort(node *head){
+    node* curr = head;
+    head = NULL;
+    node* next;
+    while (curr != NULL){
+        next = curr->next;
+        if(curr->next == NULL) break;
+
+        if(head == NULL) {
+            head = create(NULL, NULL);
+            if(curr->data > next->data){
+                head->data = next->data;
+                head = append(head, curr->data);
+                curr = curr->next->next;
+            } else {
+                head->data = curr->data;
+                head = append(head, next->data);
+                curr = curr->next;
+            }
+            continue;
+        }
+
+        if(curr->data > next->data){
+            head = append(head, next->data);
+            head = append(head, curr->data);
+            curr = curr->next->next;
+        } else {
+            head = append(head,curr->data);
+            head = append(head, next->data);
+            curr = curr->next;
+        }
+        curr = curr->next;
+    }
+
     return head;
 }

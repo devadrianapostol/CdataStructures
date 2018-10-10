@@ -191,6 +191,7 @@ node * insertion_sort(node *head){
 }
 
 node* reverse(node** head){
+    //TODO: more efficient, don't use another LL, change in place
     node* curr = *head;
     node* temp = NULL;
     while(curr != NULL){
@@ -205,6 +206,7 @@ node* reverse(node** head){
     return *head;
 }
 
+//TODO: test
 node* remove_front(node* head){
     if(head == NULL) return NULL;
     node* front = head;
@@ -213,4 +215,14 @@ node* remove_front(node* head){
     if(front == head) head = NULL;
     free(front);
     return head;
+}
+
+//TODO
+node* remove_back(node* head){
+    return NULL;
+}
+
+//TODO
+node* remove_any(node* head,node* nd){
+    return NULL;
 }

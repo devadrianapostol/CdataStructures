@@ -40,4 +40,8 @@ node* reverse(node** head);
 
 node* remove_front(node* head);
 
+node* remove_back(node* head);
+
+node* remove_any(node* head,node* nd);
+
 #endif //C_LINKEDLIST_H

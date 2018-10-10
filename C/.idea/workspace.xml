@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -36,21 +36,21 @@
       <file leaf-file-name="linkedlist.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/linkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+            <state relative-caret-position="1062">
+              <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
                 <element signature="e#87#139#0" expanded="false" />
-                <element signature="e#430#492#0" expanded="false" />
-                <element signature="e#1054#1278#0" expanded="false" />
-                <element signature="e#1280#1431#0" expanded="false" />
-                <element signature="e#1433#1707#0" expanded="false" />
-                <element signature="e#1709#1856#0" expanded="false" />
-                <element signature="e#1858#2124#0" expanded="false" />
-                <element signature="e#2126#2334#0" expanded="false" />
-                <element signature="e#2336#2449#0" expanded="false" />
-                <element signature="e#2451#2590#0" expanded="false" />
-                <element signature="e#2592#2862#0" expanded="false" />
+                <element signature="e#1182#1406#0" expanded="false" />
+                <element signature="e#1408#1559#0" expanded="false" />
+                <element signature="e#1561#1835#0" expanded="false" />
+                <element signature="e#1837#1984#0" expanded="false" />
+                <element signature="e#1986#2252#0" expanded="false" />
+                <element signature="e#2254#2462#0" expanded="false" />
+                <element signature="e#2464#2577#0" expanded="false" />
+                <element signature="e#2579#2738#0" expanded="false" />
+                <element signature="e#2740#3010#0" expanded="false" />
+                <element signature="e#3012#3396#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -151,18 +151,20 @@
       <workItem from="1539079106490" duration="28000" />
       <workItem from="1539079680945" duration="68000" />
       <workItem from="1539088724561" duration="51000" />
-      <workItem from="1539093452813" duration="2881000" />
+      <workItem from="1539093452813" duration="2916000" />
+      <workItem from="1539161514279" duration="402000" />
+      <workItem from="1539162293406" duration="509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3054000" />
+    <option name="totallyTimeSpent" value="4000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="197" y="175" width="1869" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2608457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26688632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cargo" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -194,15 +196,73 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/linkedlist.c</url>
-          <line>131</line>
+          <line>134</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedlist.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="145" column="26" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="26" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+            <element signature="e#87#139#0" expanded="false" />
+            <element signature="e#1182#1406#0" expanded="false" />
+            <element signature="e#1408#1559#0" expanded="false" />
+            <element signature="e#1561#1835#0" expanded="false" />
+            <element signature="e#1837#1984#0" expanded="false" />
+            <element signature="e#1986#2252#0" expanded="false" />
+            <element signature="e#2254#2462#0" expanded="false" />
+            <element signature="e#2464#2577#0" expanded="false" />
+            <element signature="e#2579#2738#0" expanded="false" />
+            <element signature="e#2740#3010#0" expanded="false" />
+            <element signature="e#3012#3396#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedlist.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+            <element signature="e#87#139#0" expanded="false" />
+            <element signature="e#1182#1406#0" expanded="false" />
+            <element signature="e#1408#1559#0" expanded="false" />
+            <element signature="e#1561#1835#0" expanded="false" />
+            <element signature="e#1837#1984#0" expanded="false" />
+            <element signature="e#1986#2252#0" expanded="false" />
+            <element signature="e#2254#2462#0" expanded="false" />
+            <element signature="e#2464#2577#0" expanded="false" />
+            <element signature="e#2579#2738#0" expanded="false" />
+            <element signature="e#2740#3010#0" expanded="false" />
+            <element signature="e#3012#3396#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -215,7 +275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -247,35 +306,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/linkedlist.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="44" column="52" lean-forward="true" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        <state relative-caret-position="1062">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
             <element signature="e#87#139#0" expanded="false" />
-            <element signature="e#430#492#0" expanded="false" />
-            <element signature="e#1054#1278#0" expanded="false" />
-            <element signature="e#1280#1431#0" expanded="false" />
-            <element signature="e#1433#1707#0" expanded="false" />
-            <element signature="e#1709#1856#0" expanded="false" />
-            <element signature="e#1858#2124#0" expanded="false" />
-            <element signature="e#2126#2334#0" expanded="false" />
-            <element signature="e#2336#2449#0" expanded="false" />
-            <element signature="e#2451#2590#0" expanded="false" />
-            <element signature="e#2592#2862#0" expanded="false" />
+            <element signature="e#1182#1406#0" expanded="false" />
+            <element signature="e#1408#1559#0" expanded="false" />
+            <element signature="e#1561#1835#0" expanded="false" />
+            <element signature="e#1837#1984#0" expanded="false" />
+            <element signature="e#1986#2252#0" expanded="false" />
+            <element signature="e#2254#2462#0" expanded="false" />
+            <element signature="e#2464#2577#0" expanded="false" />
+            <element signature="e#2579#2738#0" expanded="false" />
+            <element signature="e#2740#3010#0" expanded="false" />
+            <element signature="e#3012#3396#0" expanded="false" />
           </folding>
         </state>
       </provider>

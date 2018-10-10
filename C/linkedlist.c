@@ -19,17 +19,19 @@ void display(node **pNode);
 
 node *append(node *pNode, int data);
 
-typedef void (*callback)(node* data);
+typedef void (*callback)(node* data, int index);
 
 void traverse(node* head, callback f);
 
 int count(node *pNode);
 
-callback printF(node* curr){
-    printf("%d\n", curr->data);
+callback printF(node* curr, int index){
+    printf("Node %d: %d\n", index, curr->data);
 }
 
 node* insert_after(node* head, int data, node* prev);
+
+node* insert_before(node* head, int data, node* prev);
 
 node * getNode(node **pNode, int i);
 
@@ -43,11 +45,11 @@ int main(){
     head = push(head, 1003 );
     head = append(head, 19999);
     head = insert_after(head, 2, getNode(&head, 1));
+    head = insert_before(head, 3, getNode(&head, 5));
     head = append(head, 5000);
 
-    //display(&head);
     traverse(head, (callback) printF);
-    printf("Nr of nodes: %d", count(head));
+    printf("Nr of nodes: %d\n", count(head));
     return 0;
 }
 
@@ -127,9 +129,10 @@ node* prepend(node* pNode, int data){
 }
 
 void traverse(node* head, callback f){
+    int c = 0;
     node* curr = head;
     while (curr != NULL){
-        f(curr);
+        f(curr, ++c);
         curr = curr->next;
     }
 }
@@ -142,6 +145,24 @@ node* insert_after(node* head, int data, node* prev){
             curr->next = tmp;
         }
         curr = curr->next;
+    }
+    return head;
+}
+
+node* insert_before(node* head, int data, node* prev){
+    node* curr = head;
+    node* pre;
+    if(prev == head){
+        return prepend(head, data);
+    }
+    while (curr != NULL){
+        pre = curr;
+        curr = curr->next;
+        if(curr == prev){
+            node* temp = create(data, prev);
+            pre->next = temp;
+            break;
+        }
     }
     return head;
 }

@@ -95,6 +95,7 @@ node* create(int data, void *next) {
     node* tmp = malloc(sizeof(node));
     if(tmp == NULL){
         printf("Could not create new node");
+        exit(0);
     }
     tmp->data = data;
     tmp->next = next;
@@ -157,36 +158,30 @@ node* search(node** head, int data){
 
 node * insertion_sort(node *head){
     node* curr = head;
+    node* e;
+    node* temp;
     head = NULL;
-    node* next;
+
     while (curr != NULL){
-        next = curr->next;
-        if(curr->next == NULL) break;
+        e = curr;
+        curr=curr->next;
+        if(head != NULL){
+            if(e->data > head->data){
+                temp = head;
+                while( (temp->next != NULL) && (e->data > temp->next->data)){
+                    temp = temp->next;
+                }
+                e->next = temp->next;
+                temp->next = e;
 
-        if(head == NULL) {
-            head = create(NULL, NULL);
-            if(curr->data > next->data){
-                head->data = next->data;
-                head = append(head, curr->data);
-                curr = curr->next->next;
             } else {
-                head->data = curr->data;
-                head = append(head, next->data);
-                curr = curr->next;
+                e->next = head;
+                head = e;
             }
-            continue;
-        }
-
-        if(curr->data > next->data){
-            head = append(head, next->data);
-            head = append(head, curr->data);
-            curr = curr->next->next;
         } else {
-            head = append(head,curr->data);
-            head = append(head, next->data);
-            curr = curr->next;
+            e->next = NULL;
+            head = e;
         }
-        curr = curr->next;
     }
 
     return head;

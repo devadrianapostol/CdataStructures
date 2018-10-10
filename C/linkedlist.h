@@ -30,11 +30,14 @@ node* insert_after(node* head, int data, node* prev);
 
 node* insert_before(node* head, int data, node* prev);
 
-node * getNode(node** pNode, int i);
+node* getNode(node** pNode, int i);
 
 node* search(node** head, int data);
 
-node * insertion_sort(node *head);
+node* insertion_sort(node *head);
 
+node* reverse(node** head);
+
+node* remove_front(node* head);
 
 #endif //C_LINKEDLIST_H

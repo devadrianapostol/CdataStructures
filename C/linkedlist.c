@@ -29,6 +29,9 @@ int main(){
     head = insertion_sort(head);
     traverse(head, (callback) printF);
 
+    printf("reverse....\n" );
+    head = reverse(&head);
+    traverse(head, (callback) printF);
     return 0;
 }
 
@@ -184,5 +187,30 @@ node * insertion_sort(node *head){
         }
     }
 
+    return head;
+}
+
+node* reverse(node** head){
+    node* curr = *head;
+    node* temp = NULL;
+    while(curr != NULL){
+        if(temp != NULL){
+           temp = prepend(temp, curr->data);
+        } else {
+           temp = create(curr->data, NULL );
+        }
+        curr = curr->next;
+    }
+    *head = temp;
+    return *head;
+}
+
+node* remove_front(node* head){
+    if(head == NULL) return NULL;
+    node* front = head;
+    head = head->next;
+    front->next = NULL;
+    if(front == head) head = NULL;
+    free(front);
     return head;
 }

@@ -32,6 +32,11 @@ int main(){
     printf("reverse....\n" );
     head = reverse(&head);
     traverse(head, (callback) printF);
+
+    printf("remove back...\n");
+    head = remove_back(head);
+    traverse(head, (callback) printF);
+
     return 0;
 }
 
@@ -219,7 +224,25 @@ node* remove_front(node* head){
 
 //TODO
 node* remove_back(node* head){
-    return NULL;
+    node* curr = head;
+    head = NULL;
+    node* prev;
+
+    while(curr->next != NULL){
+        prev = curr;
+        curr = curr->next;
+
+        if(head != NULL){
+            head = append(head, prev->data);
+            if(curr->next == NULL){
+                break;
+            }
+        } else {
+            head = create(prev->data, NULL);
+        }
+    }
+    free(curr);
+    return head;
 }
 
 //TODO

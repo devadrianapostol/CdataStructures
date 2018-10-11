@@ -1,0 +1,834 @@
+==20547== Memcheck, a memory error detector
+==20547== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==20547== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==20547== Command: ./cmake-build-debug/C
+==20547== Parent PID: 20546
+==20547== 
+--20547-- 
+--20547-- Valgrind options:
+--20547--    --leak-check=full
+--20547--    --show-leak-kinds=all
+--20547--    --track-origins=yes
+--20547--    --verbose
+--20547--    --log-file=valgrind-out.txt
+--20547-- Contents of /proc/version:
+--20547--   Linux version 4.16.1mycustomkernel-custom416 (ady@ady-PC-BX06506) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9)) #2 SMP Wed Apr 11 19:51:17 EEST 2018
+--20547-- 
+--20547-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--20547-- Page sizes: currently 4096, max supported 4096
+--20547-- Valgrind library directory: /usr/lib/valgrind
+--20547-- Reading syms from /home/ady/DataStructures/C/cmake-build-debug/C
+--20547-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--20547--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--20547--   .. CRC mismatch (computed aa979a42 wanted 9019bbb7)
+--20547--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--20547--   .. CRC is valid
+--20547-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--20547--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--20547--   .. CRC mismatch (computed eea41ea9 wanted 2009db78)
+--20547--    object doesn't have a symbol table
+--20547--    object doesn't have a dynamic symbol table
+--20547-- Scheduler: using generic scheduler lock implementation.
+--20547-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==20547== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-20547-by-ady-on-???
+==20547== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-20547-by-ady-on-???
+==20547== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-20547-by-ady-on-???
+==20547== 
+==20547== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==20547== don't want to do, unless you know exactly what you're doing,
+==20547== or are doing some strange experiment):
+==20547==   /usr/lib/valgrind/../../bin/vgdb --pid=20547 ...command...
+==20547== 
+==20547== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==20547==   /path/to/gdb ./cmake-build-debug/C
+==20547== and then give GDB the following command
+==20547==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=20547
+==20547== --pid is optional if only one valgrind process is running
+==20547== 
+--20547-- REDIR: 0x401cfd0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--20547-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--20547--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--20547--   .. CRC mismatch (computed 2567ccf6 wanted 49420590)
+--20547--    object doesn't have a symbol table
+--20547-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--20547--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--20547--   .. CRC mismatch (computed 0e27c9a8 wanted ac585421)
+--20547--    object doesn't have a symbol table
+==20547== WARNING: new redirection conflicts with existing -- ignoring it
+--20547--     old: 0x0401cfd0 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--20547--     new: 0x0401cfd0 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--20547-- REDIR: 0x401b920 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--20547-- REDIR: 0x401bb40 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--20547-- REDIR: 0x401dd30 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--20547-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--20547--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--20547--   .. CRC mismatch (computed 7a8ee3e4 wanted a5190ac4)
+--20547--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--20547--   .. CRC is valid
+--20547-- REDIR: 0x4ec9a00 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--20547-- REDIR: 0x4ec5280 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--20547-- REDIR: 0x4ecbcf0 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--20547-- REDIR: 0x4ec76f0 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--20547-- REDIR: 0x4ec7a80 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--20547-- REDIR: 0x4ec914b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--20547-- REDIR: 0x4ec7400 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--20547-- REDIR: 0x4ebe130 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+--20547-- REDIR: 0x4ebe4f0 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+==20547== Invalid read of size 8
+==20547==    at 0x400B8E: insert_after (linkedlist.c:137)
+==20547==    by 0x4007C3: main (linkedlist.c:21)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400972: append (linkedlist.c:70)
+==20547==    by 0x400801: main (linkedlist.c:23)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x4009A0: append (linkedlist.c:75)
+==20547==    by 0x400801: main (linkedlist.c:23)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+--20547-- REDIR: 0x4ed0760 (libc.so.6:strchrnul) redirected to 0x4c34da0 (strchrnul)
+--20547-- REDIR: 0x4ec93b0 (libc.so.6:__GI_mempcpy) redirected to 0x4c34fa0 (__GI_mempcpy)
+==20547== Invalid read of size 4
+==20547==    at 0x4006C9: printF (linkedlist.c:9)
+==20547==    by 0x400B27: traverse (linkedlist.c:125)
+==20547==    by 0x400816: main (linkedlist.c:25)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400B2C: traverse (linkedlist.c:126)
+==20547==    by 0x400816: main (linkedlist.c:25)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400941: count (linkedlist.c:62)
+==20547==    by 0x400822: main (linkedlist.c:26)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400CB1: insertion_sort (linkedlist.c:179)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 4
+==20547==    at 0x400CC4: insertion_sort (linkedlist.c:181)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 4
+==20547==    at 0x400CF7: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid write of size 8
+==20547==    at 0x400D13: insertion_sort (linkedlist.c:186)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 4
+==20547==    at 0x400D01: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400CEA: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400CFD: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400CDE: insertion_sort (linkedlist.c:184)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 4
+==20547==    at 0x4006C9: printF (linkedlist.c:9)
+==20547==    by 0x400B27: traverse (linkedlist.c:125)
+==20547==    by 0x400854: main (linkedlist.c:30)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400B2C: traverse (linkedlist.c:126)
+==20547==    by 0x400854: main (linkedlist.c:30)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+--20547-- REDIR: 0x4ec5720 (libc.so.6:strlen) redirected to 0x4c30f60 (strlen)
+==20547== Invalid read of size 4
+==20547==    at 0x400D98: reverse (linkedlist.c:209)
+==20547==    by 0x40086A: main (linkedlist.c:33)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400DC8: reverse (linkedlist.c:213)
+==20547==    by 0x40086A: main (linkedlist.c:33)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400972: append (linkedlist.c:70)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Address 0x5204b68 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x4009A0: append (linkedlist.c:75)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Address 0x5204b68 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== Invalid read of size 4
+==20547==    at 0x4006C9: printF (linkedlist.c:9)
+==20547==    by 0x400B27: traverse (linkedlist.c:125)
+==20547==    by 0x4008AA: main (linkedlist.c:38)
+==20547==  Address 0x5204b60 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== Invalid read of size 8
+==20547==    at 0x400B2C: traverse (linkedlist.c:126)
+==20547==    by 0x4008AA: main (linkedlist.c:38)
+==20547==  Address 0x5204b68 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== Invalid free() / delete / delete[] / realloc()
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4008B6: main (linkedlist.c:40)
+==20547==  Address 0x5204b60 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== 
+==20547== HEAP SUMMARY:
+==20547==     in use at exit: 320 bytes in 20 blocks
+==20547==   total heap usage: 33 allocs, 14 frees, 1,536 bytes allocated
+==20547== 
+==20547== Searching for pointers to 20 not-freed blocks
+==20547== Checked 64,288 bytes
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 1 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400707: main (linkedlist.c:13)
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 2 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x40071C: main (linkedlist.c:14)
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 3 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400731: main (linkedlist.c:15)
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 4 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400746: main (linkedlist.c:16)
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 5 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x40075B: main (linkedlist.c:17)
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 6 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400C05: insert_before (linkedlist.c:150)
+==20547==    by 0x4007EC: main (linkedlist.c:22)
+==20547== 
+==20547== 16 bytes in 1 blocks are indirectly lost in loss record 7 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400989: append (linkedlist.c:71)
+==20547==    by 0x400801: main (linkedlist.c:23)
+==20547== 
+==20547== 16 bytes in 1 blocks are definitely lost in loss record 8 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400989: append (linkedlist.c:71)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== 32 (16 direct, 16 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400ADE: prepend (linkedlist.c:116)
+==20547==    by 0x400770: main (linkedlist.c:18)
+==20547== 
+==20547== 112 (16 direct, 96 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400B79: insert_after (linkedlist.c:134)
+==20547==    by 0x4007C3: main (linkedlist.c:21)
+==20547== 
+==20547== 144 bytes in 9 blocks are indirectly lost in loss record 11 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400ADE: prepend (linkedlist.c:116)
+==20547==    by 0x400DA7: reverse (linkedlist.c:209)
+==20547==    by 0x40086A: main (linkedlist.c:33)
+==20547== 
+==20547== 160 (16 direct, 144 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400ADE: prepend (linkedlist.c:116)
+==20547==    by 0x400DA7: reverse (linkedlist.c:209)
+==20547==    by 0x40086A: main (linkedlist.c:33)
+==20547== 
+==20547== LEAK SUMMARY:
+==20547==    definitely lost: 64 bytes in 4 blocks
+==20547==    indirectly lost: 256 bytes in 16 blocks
+==20547==      possibly lost: 0 bytes in 0 blocks
+==20547==    still reachable: 0 bytes in 0 blocks
+==20547==         suppressed: 0 bytes in 0 blocks
+==20547== 
+==20547== ERROR SUMMARY: 142 errors from 27 contexts (suppressed: 0 from 0)
+==20547== 
+==20547== 1 errors in context 1 of 27:
+==20547== Invalid free() / delete / delete[] / realloc()
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4008B6: main (linkedlist.c:40)
+==20547==  Address 0x5204b60 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== 
+==20547== 1 errors in context 2 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x4009A0: append (linkedlist.c:75)
+==20547==    by 0x400801: main (linkedlist.c:23)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 1 errors in context 3 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400972: append (linkedlist.c:70)
+==20547==    by 0x400801: main (linkedlist.c:23)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 1 errors in context 4 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400B8E: insert_after (linkedlist.c:137)
+==20547==    by 0x4007C3: main (linkedlist.c:21)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 5 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400DC8: reverse (linkedlist.c:213)
+==20547==    by 0x40086A: main (linkedlist.c:33)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 6 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x400D98: reverse (linkedlist.c:209)
+==20547==    by 0x40086A: main (linkedlist.c:33)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 7 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400B2C: traverse (linkedlist.c:126)
+==20547==    by 0x400854: main (linkedlist.c:30)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 8 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x4006C9: printF (linkedlist.c:9)
+==20547==    by 0x400B27: traverse (linkedlist.c:125)
+==20547==    by 0x400854: main (linkedlist.c:30)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 9 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400CDE: insertion_sort (linkedlist.c:184)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 10 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400CFD: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 11 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400CEA: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 12 of 27:
+==20547== Invalid write of size 8
+==20547==    at 0x400D13: insertion_sort (linkedlist.c:186)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 13 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x400CC4: insertion_sort (linkedlist.c:181)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 14 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400CB1: insertion_sort (linkedlist.c:179)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 15 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400941: count (linkedlist.c:62)
+==20547==    by 0x400822: main (linkedlist.c:26)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 16 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400B2C: traverse (linkedlist.c:126)
+==20547==    by 0x400816: main (linkedlist.c:25)
+==20547==  Address 0x5204228 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 2 errors in context 17 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x4006C9: printF (linkedlist.c:9)
+==20547==    by 0x400B27: traverse (linkedlist.c:125)
+==20547==    by 0x400816: main (linkedlist.c:25)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 3 errors in context 18 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x400D01: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 9 errors in context 19 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400B2C: traverse (linkedlist.c:126)
+==20547==    by 0x4008AA: main (linkedlist.c:38)
+==20547==  Address 0x5204b68 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== 
+==20547== 9 errors in context 20 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x4006C9: printF (linkedlist.c:9)
+==20547==    by 0x400B27: traverse (linkedlist.c:125)
+==20547==    by 0x4008AA: main (linkedlist.c:38)
+==20547==  Address 0x5204b60 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== 
+==20547== 15 errors in context 21 of 27:
+==20547== Invalid read of size 4
+==20547==    at 0x400CF7: insertion_sort (linkedlist.c:183)
+==20547==    by 0x40083F: main (linkedlist.c:29)
+==20547==  Address 0x5204220 is 0 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x40079A: main (linkedlist.c:20)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400A24: push (linkedlist.c:90)
+==20547==    by 0x400785: main (linkedlist.c:19)
+==20547== 
+==20547== 
+==20547== 36 errors in context 22 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x4009A0: append (linkedlist.c:75)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Address 0x5204b68 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== 
+==20547== 36 errors in context 23 of 27:
+==20547== Invalid read of size 8
+==20547==    at 0x400972: append (linkedlist.c:70)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Address 0x5204b68 is 8 bytes inside a block of size 16 free'd
+==20547==    at 0x4C2EDEB: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x4009BA: append (linkedlist.c:77)
+==20547==    by 0x400EA1: remove_back (linkedlist.c:242)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547==  Block was alloc'd at
+==20547==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20547==    by 0x400A7F: create (linkedlist.c:105)
+==20547==    by 0x400EC6: remove_back (linkedlist.c:247)
+==20547==    by 0x400895: main (linkedlist.c:37)
+==20547== 
+==20547== ERROR SUMMARY: 142 errors from 27 contexts (suppressed: 0 from 0)

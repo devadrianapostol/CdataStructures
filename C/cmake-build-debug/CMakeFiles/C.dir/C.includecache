@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/ady/DataStructures/C/linkedlist.c
+/home/ady/DataStructures/C/doublelinkedlist.c
 stdio.h
 -
 stdlib.h
 -
-linkedlist.h
-/home/ady/DataStructures/C/linkedlist.h
+doublelinkedlist.h
+/home/ady/DataStructures/C/doublelinkedlist.h
 
-/home/ady/DataStructures/C/linkedlist.h
+/home/ady/DataStructures/C/doublelinkedlist.h
 

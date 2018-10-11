@@ -3,4 +3,10 @@ project(C C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(C linkedlist.c linkedlist.h)
+#linkedlist.c linkedlist.h
+#queue.c
+#stack-array.c
+#stack-linkedlist.c
+#binarySearchTree.c binarySearchTree.h
+
+add_executable(C doublelinkedlist.c doublelinkedlist.h)

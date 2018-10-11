@@ -123,32 +123,32 @@ C/fast:
 	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/build
 .PHONY : C/fast
 
-linkedlist.o: linkedlist.c.o
+doublelinkedlist.o: doublelinkedlist.c.o
 
-.PHONY : linkedlist.o
+.PHONY : doublelinkedlist.o
 
 # target to build an object file
-linkedlist.c.o:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/linkedlist.c.o
-.PHONY : linkedlist.c.o
+doublelinkedlist.c.o:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/doublelinkedlist.c.o
+.PHONY : doublelinkedlist.c.o
 
-linkedlist.i: linkedlist.c.i
+doublelinkedlist.i: doublelinkedlist.c.i
 
-.PHONY : linkedlist.i
+.PHONY : doublelinkedlist.i
 
 # target to preprocess a source file
-linkedlist.c.i:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/linkedlist.c.i
-.PHONY : linkedlist.c.i
+doublelinkedlist.c.i:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/doublelinkedlist.c.i
+.PHONY : doublelinkedlist.c.i
 
-linkedlist.s: linkedlist.c.s
+doublelinkedlist.s: doublelinkedlist.c.s
 
-.PHONY : linkedlist.s
+.PHONY : doublelinkedlist.s
 
 # target to generate assembly for a file
-linkedlist.c.s:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/linkedlist.c.s
-.PHONY : linkedlist.c.s
+doublelinkedlist.c.s:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/doublelinkedlist.c.s
+.PHONY : doublelinkedlist.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C"
-	@echo "... linkedlist.o"
-	@echo "... linkedlist.i"
-	@echo "... linkedlist.s"
+	@echo "... doublelinkedlist.o"
+	@echo "... doublelinkedlist.i"
+	@echo "... doublelinkedlist.s"
 .PHONY : help
 
 

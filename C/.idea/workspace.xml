@@ -26,18 +26,18 @@
       <file leaf-file-name="linkedlist.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linkedlist.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="252">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linkedlist.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="linkedlist.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="138" column="1" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="138" selection-end-column="1" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
                 <element signature="e#1116#1385#0" expanded="false" />
@@ -62,6 +62,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="doublelinkedlist.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doublelinkedlist.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#39#57#0" expanded="true" />
+                <element signature="e#1223#1501#0" expanded="false" />
+                <element signature="e#1503#1777#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doublelinkedlist.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doublelinkedlist.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -72,12 +96,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/stack-array.c" />
         <option value="$PROJECT_DIR$/stack-linkedlist.c" />
         <option value="$PROJECT_DIR$/valg.sh" />
+        <option value="$PROJECT_DIR$/binarySearchTree.c" />
+        <option value="$PROJECT_DIR$/binarySearchTree.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/linkedlist.h" />
         <option value="$PROJECT_DIR$/linkedlist.c" />
+        <option value="$PROJECT_DIR$/doublelinkedlist.h" />
+        <option value="$PROJECT_DIR$/doublelinkedlist.c" />
       </list>
     </option>
   </component>
@@ -114,11 +142,6 @@
             <path>
               <item name="C" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="C" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="C" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="C" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,12 +209,12 @@
       <workItem from="1539269492445" duration="1734000" />
       <workItem from="1539271251619" duration="654000" />
       <workItem from="1539272327145" duration="123000" />
-      <workItem from="1539293096498" duration="4499000" />
+      <workItem from="1539293096498" duration="6714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23325000" />
+    <option name="totallyTimeSpent" value="25540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="197" y="175" width="1869" height="1092" extended-state="6" />
@@ -252,8 +275,13 @@
           <line>270</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/doublelinkedlist.c</url>
+          <line>23</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="74" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -289,42 +317,47 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>curr-&gt;data &gt; next-&gt;data</expression-string>
+        <expression-string>(node*)(*pNode-&gt;data)</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(next-&gt;data) &lt; (curr-&gt;data)</expression-string>
+        <expression-string>(node*)(pNode)</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(next-&gt;data) &gt; (curr-&gt;data)</expression-string>
+        <expression-string>(node*)(*pNode)-&gt;data</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>(next-&gt;data - curr-&gt;data) &gt; 0</expression-string>
+        <expression-string>(node)(**pNode)-&gt;data</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>next-&gt;data - curr-&gt;data</expression-string>
+        <expression-string>(node)**pNode</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>curr-&gt;data - next-&gt;data</expression-string>
+        <expression-string>**pNode</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>next-&gt;data</expression-string>
+        <expression-string>**pNode-&gt;data</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>curr-&gt;data</expression-string>
+        <expression-string>sizeof(**pNode)</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>sizeof(pNode)</expression-string>
         <language-id>ObjectiveC</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -800,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stack-array.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -833,21 +859,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="108" lean-forward="false" selection-start-line="1" selection-start-column="108" selection-end-line="1" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/binarySearchTree.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/binarySearchTree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/linkedlist.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="252">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/linkedlist.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="138" column="1" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="138" selection-end-column="1" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
             <element signature="e#1116#1385#0" expanded="false" />
@@ -867,6 +918,26 @@
             <element signature="e#5026#5240#0" expanded="false" />
             <element signature="e#5242#5665#0" expanded="false" />
             <element signature="e#5667#6081#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doublelinkedlist.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doublelinkedlist.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#57#0" expanded="true" />
+            <element signature="e#1223#1501#0" expanded="false" />
+            <element signature="e#1503#1777#0" expanded="false" />
           </folding>
         </state>
       </provider>

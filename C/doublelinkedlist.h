@@ -1,18 +1,19 @@
 //
-// Created by ady on 10.10.2018.
+// Created by ady on 12.10.2018.
 //
 
-#ifndef C_LINKEDLIST_H
-#define C_LINKEDLIST_H
+#ifndef C_DOUBLELINKEDLIST_H
+#define C_DOUBLELINKEDLIST_H
 
 typedef struct node {
     int data;
+    struct node* previous;
     struct node* next;
 } node;
 
 typedef void (*callback)(node* data, int index);
 
-node* create(int data, node *next);
+node* create(int data,node* prev, node *next);
 
 node push(node **pNode, int data);
 
@@ -22,7 +23,7 @@ void display(node **pNode);
 
 node *append(node **pNode, int data);
 
-void traverse(node* head, callback f);
+void traverse(node* head,int direction, callback f);
 
 int count(node *pNode);
 
@@ -46,4 +47,4 @@ node* remove_any(node **head, node* nd);
 
 void dispose(node *list);
 
-#endif //C_LINKEDLIST_H
+#endif //C_DOUBLELINKEDLIST_H

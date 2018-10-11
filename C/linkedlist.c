@@ -120,7 +120,7 @@ node push(node **pNode, int data) {
     return **pNode;
 }
 
-node *create(int data, void *next) {
+node *create(int data, node *next) {
     node *tmp = malloc(sizeof(node) + sizeof(int));
     if(tmp == NULL){
         printf("Could not create new node");

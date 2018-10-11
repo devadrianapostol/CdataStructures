@@ -41,8 +41,24 @@ int main(){
     printf("remove any...\n");
     remove_any(&list, getNode(&list, 3) );
     traverse(list, (callback) printF);
+
+    dispose(list);
     free(list);
     return 0;
+}
+
+void dispose(node *list) {
+    node *curr, *temp;
+    curr = list;
+    if(list != NULL){
+        curr = curr->next;
+        list->next = NULL;
+        while(curr != NULL){
+            temp = curr->next;
+            free(curr);
+            curr = temp;
+        }
+    }
 }
 
 node* getNode(node **pNode, int i) {

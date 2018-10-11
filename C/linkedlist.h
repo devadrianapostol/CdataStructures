@@ -44,4 +44,6 @@ node* remove_back(node **head);
 
 node* remove_any(node **head, node* nd);
 
+void dispose(node *list);
+
 #endif //C_LINKEDLIST_H

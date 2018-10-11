@@ -37,6 +37,7 @@ int main(){
     head = remove_back(head);
     traverse(head, (callback) printF);
 
+    free(head);
     return 0;
 }
 
@@ -73,6 +74,7 @@ node *append(node *pNode, int data) {
         }
         curr = curr->next;
     }
+    free(curr);
     return pNode;
 }
 
@@ -134,6 +136,7 @@ node* insert_after(node* head, int data, node* prev){
         }
         curr = curr->next;
     }
+    free(curr);
     return head;
 }
 
@@ -161,6 +164,7 @@ node* search(node** head, int data){
         }
         curr = curr->next;
     }
+    free(curr);
     return NULL;
 }
 
@@ -191,6 +195,7 @@ node * insertion_sort(node *head){
             head = e;
         }
     }
+    free(curr);
 
     return head;
 }
@@ -207,6 +212,7 @@ node* reverse(node** head){
         }
         curr = curr->next;
     }
+    free(curr);
     *head = temp;
     return *head;
 }

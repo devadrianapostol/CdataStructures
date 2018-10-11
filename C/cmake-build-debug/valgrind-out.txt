@@ -1,0 +1,189 @@
+==19702== Memcheck, a memory error detector
+==19702== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==19702== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==19702== Command: ./C
+==19702== Parent PID: 17410
+==19702== 
+--19702-- 
+--19702-- Valgrind options:
+--19702--    --leak-check=full
+--19702--    --show-leak-kinds=all
+--19702--    --track-origins=yes
+--19702--    --verbose
+--19702--    --log-file=valgrind-out.txt
+--19702-- Contents of /proc/version:
+--19702--   Linux version 4.16.1mycustomkernel-custom416 (ady@ady-PC-BX06506) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.9)) #2 SMP Wed Apr 11 19:51:17 EEST 2018
+--19702-- 
+--19702-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-rdtscp-sse3-avx
+--19702-- Page sizes: currently 4096, max supported 4096
+--19702-- Valgrind library directory: /usr/lib/valgrind
+--19702-- Reading syms from /home/ady/DataStructures/C/cmake-build-debug/C
+--19702-- Reading syms from /lib/x86_64-linux-gnu/ld-2.23.so
+--19702--   Considering /lib/x86_64-linux-gnu/ld-2.23.so ..
+--19702--   .. CRC mismatch (computed aa979a42 wanted 9019bbb7)
+--19702--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.23.so ..
+--19702--   .. CRC is valid
+--19702-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--19702--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--19702--   .. CRC mismatch (computed eea41ea9 wanted 2009db78)
+--19702--    object doesn't have a symbol table
+--19702--    object doesn't have a dynamic symbol table
+--19702-- Scheduler: using generic scheduler lock implementation.
+--19702-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==19702== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-19702-by-ady-on-???
+==19702== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-19702-by-ady-on-???
+==19702== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-19702-by-ady-on-???
+==19702== 
+==19702== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==19702== don't want to do, unless you know exactly what you're doing,
+==19702== or are doing some strange experiment):
+==19702==   /usr/lib/valgrind/../../bin/vgdb --pid=19702 ...command...
+==19702== 
+==19702== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==19702==   /path/to/gdb ./C
+==19702== and then give GDB the following command
+==19702==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=19702
+==19702== --pid is optional if only one valgrind process is running
+==19702== 
+--19702-- REDIR: 0x401cfd0 (ld-linux-x86-64.so.2:strlen) redirected to 0x3809e181 (???)
+--19702-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--19702--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--19702--   .. CRC mismatch (computed 2567ccf6 wanted 49420590)
+--19702--    object doesn't have a symbol table
+--19702-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--19702--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--19702--   .. CRC mismatch (computed 0e27c9a8 wanted ac585421)
+--19702--    object doesn't have a symbol table
+==19702== WARNING: new redirection conflicts with existing -- ignoring it
+--19702--     old: 0x0401cfd0 (strlen              ) R-> (0000.0) 0x3809e181 ???
+--19702--     new: 0x0401cfd0 (strlen              ) R-> (2007.0) 0x04c31020 strlen
+--19702-- REDIR: 0x401b920 (ld-linux-x86-64.so.2:index) redirected to 0x4c30bc0 (index)
+--19702-- REDIR: 0x401bb40 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c320d0 (strcmp)
+--19702-- REDIR: 0x401dd30 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c35270 (mempcpy)
+--19702-- Reading syms from /lib/x86_64-linux-gnu/libc-2.23.so
+--19702--   Considering /lib/x86_64-linux-gnu/libc-2.23.so ..
+--19702--   .. CRC mismatch (computed 7a8ee3e4 wanted a5190ac4)
+--19702--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.23.so ..
+--19702--   .. CRC is valid
+--19702-- REDIR: 0x4ec9a00 (libc.so.6:strcasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--19702-- REDIR: 0x4ec5280 (libc.so.6:strcspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--19702-- REDIR: 0x4ecbcf0 (libc.so.6:strncasecmp) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--19702-- REDIR: 0x4ec76f0 (libc.so.6:strpbrk) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--19702-- REDIR: 0x4ec7a80 (libc.so.6:strspn) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--19702-- REDIR: 0x4ec914b (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a286f0 (_vgnU_ifunc_wrapper)
+--19702-- REDIR: 0x4ec7400 (libc.so.6:rindex) redirected to 0x4c308a0 (rindex)
+--19702-- REDIR: 0x4ebe130 (libc.so.6:malloc) redirected to 0x4c2db20 (malloc)
+--19702-- REDIR: 0x4ebe4f0 (libc.so.6:free) redirected to 0x4c2ed80 (free)
+--19702-- REDIR: 0x4ed0760 (libc.so.6:strchrnul) redirected to 0x4c34da0 (strchrnul)
+--19702-- REDIR: 0x4ec93b0 (libc.so.6:__GI_mempcpy) redirected to 0x4c34fa0 (__GI_mempcpy)
+--19702-- REDIR: 0x4ec5720 (libc.so.6:strlen) redirected to 0x4c30f60 (strlen)
+==19702== 
+==19702== HEAP SUMMARY:
+==19702==     in use at exit: 480 bytes in 30 blocks
+==19702==   total heap usage: 33 allocs, 3 frees, 1,536 bytes allocated
+==19702== 
+==19702== Searching for pointers to 30 not-freed blocks
+==19702== Checked 64,256 bytes
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 1 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400707: main (linkedlist.c:13)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 2 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400A18: push (linkedlist.c:89)
+==19702==    by 0x40071C: main (linkedlist.c:14)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 3 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400A18: push (linkedlist.c:89)
+==19702==    by 0x400731: main (linkedlist.c:15)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 4 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400A18: push (linkedlist.c:89)
+==19702==    by 0x400746: main (linkedlist.c:16)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 5 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400A18: push (linkedlist.c:89)
+==19702==    by 0x40075B: main (linkedlist.c:17)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 6 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400AD2: prepend (linkedlist.c:115)
+==19702==    by 0x400770: main (linkedlist.c:18)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 7 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400A18: push (linkedlist.c:89)
+==19702==    by 0x400785: main (linkedlist.c:19)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 8 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400989: append (linkedlist.c:71)
+==19702==    by 0x40079A: main (linkedlist.c:20)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 9 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400BF9: insert_before (linkedlist.c:149)
+==19702==    by 0x4007EC: main (linkedlist.c:22)
+==19702== 
+==19702== 16 bytes in 1 blocks are indirectly lost in loss record 10 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400989: append (linkedlist.c:71)
+==19702==    by 0x400801: main (linkedlist.c:23)
+==19702== 
+==19702== 128 bytes in 8 blocks are indirectly lost in loss record 11 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400989: append (linkedlist.c:71)
+==19702==    by 0x400E95: remove_back (linkedlist.c:241)
+==19702==    by 0x400895: main (linkedlist.c:37)
+==19702== 
+==19702== 144 bytes in 9 blocks are indirectly lost in loss record 12 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400AD2: prepend (linkedlist.c:115)
+==19702==    by 0x400D9B: reverse (linkedlist.c:208)
+==19702==    by 0x40086A: main (linkedlist.c:33)
+==19702== 
+==19702== 144 (16 direct, 128 indirect) bytes in 1 blocks are definitely lost in loss record 13 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400989: append (linkedlist.c:71)
+==19702==    by 0x400E95: remove_back (linkedlist.c:241)
+==19702==    by 0x400895: main (linkedlist.c:37)
+==19702== 
+==19702== 160 (16 direct, 144 indirect) bytes in 1 blocks are definitely lost in loss record 14 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400AD2: prepend (linkedlist.c:115)
+==19702==    by 0x400D9B: reverse (linkedlist.c:208)
+==19702==    by 0x40086A: main (linkedlist.c:33)
+==19702== 
+==19702== 176 (16 direct, 160 indirect) bytes in 1 blocks are definitely lost in loss record 15 of 15
+==19702==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19702==    by 0x400A73: create (linkedlist.c:104)
+==19702==    by 0x400B6D: insert_after (linkedlist.c:133)
+==19702==    by 0x4007C3: main (linkedlist.c:21)
+==19702== 
+==19702== LEAK SUMMARY:
+==19702==    definitely lost: 48 bytes in 3 blocks
+==19702==    indirectly lost: 432 bytes in 27 blocks
+==19702==      possibly lost: 0 bytes in 0 blocks
+==19702==    still reachable: 0 bytes in 0 blocks
+==19702==         suppressed: 0 bytes in 0 blocks
+==19702== 
+==19702== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)
+==19702== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 0 from 0)

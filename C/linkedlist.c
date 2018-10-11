@@ -239,7 +239,6 @@ node* reverse(node** head){
     return *head;
 }
 
-//TODO: test
 node* remove_front(node **head){
     if(*head == NULL) return NULL;
     node* front = *head;
@@ -250,7 +249,6 @@ node* remove_front(node **head){
     return *head;
 }
 
-//TODO
 node* remove_back(node **head){
     node* curr = *head;
     *head = NULL;
@@ -273,7 +271,6 @@ node* remove_back(node **head){
     return *head;
 }
 
-//TODO
 node* remove_any(node **head, node* nd){
     if(*head == nd) return remove_front(head);
     if(nd->next == NULL) return remove_back(head);

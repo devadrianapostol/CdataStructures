@@ -8,5 +8,6 @@ set(CMAKE_C_STANDARD 99)
 #stack-array.c
 #stack-linkedlist.c
 #binarySearchTree.c binarySearchTree.h
+#doublelinkedlist.c doublelinkedlist.h
 
-add_executable(C doublelinkedlist.c doublelinkedlist.h)
+add_executable(C xorll.c xorll.h)

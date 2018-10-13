@@ -123,32 +123,32 @@ C/fast:
 	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/build
 .PHONY : C/fast
 
-doublelinkedlist.o: doublelinkedlist.c.o
+xorll.o: xorll.c.o
 
-.PHONY : doublelinkedlist.o
+.PHONY : xorll.o
 
 # target to build an object file
-doublelinkedlist.c.o:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/doublelinkedlist.c.o
-.PHONY : doublelinkedlist.c.o
+xorll.c.o:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.o
+.PHONY : xorll.c.o
 
-doublelinkedlist.i: doublelinkedlist.c.i
+xorll.i: xorll.c.i
 
-.PHONY : doublelinkedlist.i
+.PHONY : xorll.i
 
 # target to preprocess a source file
-doublelinkedlist.c.i:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/doublelinkedlist.c.i
-.PHONY : doublelinkedlist.c.i
+xorll.c.i:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.i
+.PHONY : xorll.c.i
 
-doublelinkedlist.s: doublelinkedlist.c.s
+xorll.s: xorll.c.s
 
-.PHONY : doublelinkedlist.s
+.PHONY : xorll.s
 
 # target to generate assembly for a file
-doublelinkedlist.c.s:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/doublelinkedlist.c.s
-.PHONY : doublelinkedlist.c.s
+xorll.c.s:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.s
+.PHONY : xorll.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C"
-	@echo "... doublelinkedlist.o"
-	@echo "... doublelinkedlist.i"
-	@echo "... doublelinkedlist.s"
+	@echo "... xorll.o"
+	@echo "... xorll.i"
+	@echo "... xorll.s"
 .PHONY : help
 
 

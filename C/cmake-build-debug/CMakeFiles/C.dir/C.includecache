@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/ady/DataStructures/C/doublelinkedlist.c
+/home/ady/DataStructures/C/xorll.c
+xorll.h
+/home/ady/DataStructures/C/xorll.h
 stdio.h
 -
 stdlib.h
 -
-doublelinkedlist.h
-/home/ady/DataStructures/C/doublelinkedlist.h
+stdint.h
+-
 
-/home/ady/DataStructures/C/doublelinkedlist.h
+/home/ady/DataStructures/C/xorll.h
+stdint.h
+-
 

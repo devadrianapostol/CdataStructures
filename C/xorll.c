@@ -31,12 +31,13 @@ node *curr_next(node *pNode) {
 
 }
 
-uintptr_t xor(node **pNode, node **pVoid) {
-    if(pVoid == NULL) return (uintptr_t)pNode^0;
-    return (uintptr_t)pNode ^ (uintptr_t)pVoid;
+/* returns XORed value of the node addresses */
+struct node* XOR (struct node *a, struct node *b)
+{
+    return (node*) ((uintptr_t) (a) ^ (uintptr_t) (b));
 }
 
-node *create(int data, uintptr_t npx) {
+node *create(int data, node* npx) {
     node *tmp = malloc(sizeof(node) + sizeof(int));
     if(tmp == NULL){
         printf("Could not create new node");
@@ -49,7 +50,11 @@ node *create(int data, uintptr_t npx) {
 }
 
 node push(node **pNode, int data) {
-    node* tmp = create(data, xor(pNode,(uintptr_t)0));
+    printf("address of list: %p\n", pNode);
+    node* head = *pNode;
+    node* newnode = create(data, XOR(head,NULL));
+    printf("address of new: %p, %d\n", &newnode, ((node*) XOR(head,NULL))->data );
+
     node* curr = *pNode;
 
     node* prev = curr;
@@ -58,13 +63,13 @@ node push(node **pNode, int data) {
         curr = curr->next;
     }*/
     while(curr != NULL){
-        //tmp->previous = prev;
+        prev = curr;
         if(curr->npx == NULL){
-            curr->npx = xor((node **) *pNode, &tmp);
+            curr->npx = XOR(head,newnode);
+            //printf("address of new: %p , %d\n", XOR(head,newnode), ((node*)XOR(head, curr->npx))->data);
             break;
         }
-
-        curr = (node *) xor((node **) curr->npx, (uintptr_t) 0);
+        curr = XOR(curr->npx,prev->npx );
     }
     return **pNode;
 }

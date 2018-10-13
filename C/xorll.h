@@ -11,9 +11,9 @@
 // efficient doubly linked list
 typedef struct node {
     int data;
-    uintptr_t npx;
+    struct node* npx;
 } node;
-node *create(int data, unsigned long npx);
+node *create(int data, node* npx);
 
 node push(node **pNode, int data);
 

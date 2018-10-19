@@ -123,32 +123,59 @@ C/fast:
 	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/build
 .PHONY : C/fast
 
-xorll.o: xorll.c.o
+src/circularlinkedlist.o: src/circularlinkedlist.c.o
 
-.PHONY : xorll.o
+.PHONY : src/circularlinkedlist.o
 
 # target to build an object file
-xorll.c.o:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.o
-.PHONY : xorll.c.o
+src/circularlinkedlist.c.o:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/circularlinkedlist.c.o
+.PHONY : src/circularlinkedlist.c.o
 
-xorll.i: xorll.c.i
+src/circularlinkedlist.i: src/circularlinkedlist.c.i
 
-.PHONY : xorll.i
+.PHONY : src/circularlinkedlist.i
 
 # target to preprocess a source file
-xorll.c.i:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.i
-.PHONY : xorll.c.i
+src/circularlinkedlist.c.i:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/circularlinkedlist.c.i
+.PHONY : src/circularlinkedlist.c.i
 
-xorll.s: xorll.c.s
+src/circularlinkedlist.s: src/circularlinkedlist.c.s
 
-.PHONY : xorll.s
+.PHONY : src/circularlinkedlist.s
 
 # target to generate assembly for a file
-xorll.c.s:
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.s
-.PHONY : xorll.c.s
+src/circularlinkedlist.c.s:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/circularlinkedlist.c.s
+.PHONY : src/circularlinkedlist.c.s
+
+src/xorll.o: src/xorll.c.o
+
+.PHONY : src/xorll.o
+
+# target to build an object file
+src/xorll.c.o:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/xorll.c.o
+.PHONY : src/xorll.c.o
+
+src/xorll.i: src/xorll.c.i
+
+.PHONY : src/xorll.i
+
+# target to preprocess a source file
+src/xorll.c.i:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/xorll.c.i
+.PHONY : src/xorll.c.i
+
+src/xorll.s: src/xorll.c.s
+
+.PHONY : src/xorll.s
+
+# target to generate assembly for a file
+src/xorll.c.s:
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/xorll.c.s
+.PHONY : src/xorll.c.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... C"
-	@echo "... xorll.o"
-	@echo "... xorll.i"
-	@echo "... xorll.s"
+	@echo "... src/circularlinkedlist.o"
+	@echo "... src/circularlinkedlist.i"
+	@echo "... src/circularlinkedlist.s"
+	@echo "... src/xorll.o"
+	@echo "... src/xorll.i"
+	@echo "... src/xorll.s"
 .PHONY : help
 
 

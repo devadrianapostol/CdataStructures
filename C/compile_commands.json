@@ -1,1 +1,62 @@
-[]
+[
+ {
+  "directory": "/home/ady/DataStructures/C", 
+  "arguments": [
+   "gcc", 
+   "-o", 
+   "dist/stack-linkedlist", 
+   "src/stack-linkedlist.c"
+  ], 
+  "file": "src/stack-linkedlist.c"
+ }, 
+ {
+  "directory": "/home/ady/DataStructures/C", 
+  "arguments": [
+   "gcc", 
+   "-o", 
+   "xorll", 
+   "src/xorll.c"
+  ], 
+  "file": "src/xorll.c"
+ }, 
+ {
+  "directory": "/home/ady/DataStructures/C", 
+  "arguments": [
+   "gcc", 
+   "-o", 
+   "doublelinkedlist", 
+   "src/doublelinkedlist.c"
+  ], 
+  "file": "src/doublelinkedlist.c"
+ }, 
+ {
+  "directory": "/home/ady/DataStructures/C", 
+  "arguments": [
+   "gcc", 
+   "-o", 
+   "dist/stack-array", 
+   "src/stack-array.c"
+  ], 
+  "file": "src/stack-array.c"
+ }, 
+ {
+  "directory": "/home/ady/DataStructures/C", 
+  "arguments": [
+   "gcc", 
+   "-o", 
+   "dist/linkedlist", 
+   "src/linkedlist.c"
+  ], 
+  "file": "src/linkedlist.c"
+ }, 
+ {
+  "directory": "/home/ady/DataStructures/C", 
+  "arguments": [
+   "gcc", 
+   "-o", 
+   "binarySearchTree", 
+   "src/binarySearchTree.c"
+  ], 
+  "file": "src/binarySearchTree.c"
+ }
+]

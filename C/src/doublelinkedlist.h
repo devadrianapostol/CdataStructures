@@ -1,7 +1,6 @@
 //
 // Created by ady on 12.10.2018.
 //
-
 #ifndef C_DOUBLELINKEDLIST_H
 #define C_DOUBLELINKEDLIST_H
 

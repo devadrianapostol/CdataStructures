@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/C.dir/xorll.c.o"
+  "CMakeFiles/C.dir/src/xorll.c.o"
+  "CMakeFiles/C.dir/src/circularlinkedlist.c.o"
   "C.pdb"
   "C"
 )

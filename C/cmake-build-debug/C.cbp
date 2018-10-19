@@ -78,10 +78,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ady/DataStructures/C/xorll.c">
+		<Unit filename="/home/ady/DataStructures/C/src/circularlinkedlist.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="/home/ady/DataStructures/C/xorll.h">
+		<Unit filename="/home/ady/DataStructures/C/src/circularlinkedlist.h">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="/home/ady/DataStructures/C/src/xorll.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="/home/ady/DataStructures/C/src/xorll.h">
 			<Option target="C"/>
 		</Unit>
 		<Unit filename="/home/ady/DataStructures/C/CMakeLists.txt">

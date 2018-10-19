@@ -57,41 +57,67 @@ include CMakeFiles/C.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C.dir/flags.make
 
-CMakeFiles/C.dir/xorll.c.o: CMakeFiles/C.dir/flags.make
-CMakeFiles/C.dir/xorll.c.o: ../xorll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ady/DataStructures/C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C.dir/xorll.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C.dir/xorll.c.o   -c /home/ady/DataStructures/C/xorll.c
+CMakeFiles/C.dir/src/xorll.c.o: CMakeFiles/C.dir/flags.make
+CMakeFiles/C.dir/src/xorll.c.o: ../src/xorll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ady/DataStructures/C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/C.dir/src/xorll.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C.dir/src/xorll.c.o   -c /home/ady/DataStructures/C/src/xorll.c
 
-CMakeFiles/C.dir/xorll.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C.dir/xorll.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ady/DataStructures/C/xorll.c > CMakeFiles/C.dir/xorll.c.i
+CMakeFiles/C.dir/src/xorll.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C.dir/src/xorll.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ady/DataStructures/C/src/xorll.c > CMakeFiles/C.dir/src/xorll.c.i
 
-CMakeFiles/C.dir/xorll.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C.dir/xorll.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ady/DataStructures/C/xorll.c -o CMakeFiles/C.dir/xorll.c.s
+CMakeFiles/C.dir/src/xorll.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C.dir/src/xorll.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ady/DataStructures/C/src/xorll.c -o CMakeFiles/C.dir/src/xorll.c.s
 
-CMakeFiles/C.dir/xorll.c.o.requires:
+CMakeFiles/C.dir/src/xorll.c.o.requires:
 
-.PHONY : CMakeFiles/C.dir/xorll.c.o.requires
+.PHONY : CMakeFiles/C.dir/src/xorll.c.o.requires
 
-CMakeFiles/C.dir/xorll.c.o.provides: CMakeFiles/C.dir/xorll.c.o.requires
-	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/xorll.c.o.provides.build
-.PHONY : CMakeFiles/C.dir/xorll.c.o.provides
+CMakeFiles/C.dir/src/xorll.c.o.provides: CMakeFiles/C.dir/src/xorll.c.o.requires
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/xorll.c.o.provides.build
+.PHONY : CMakeFiles/C.dir/src/xorll.c.o.provides
 
-CMakeFiles/C.dir/xorll.c.o.provides.build: CMakeFiles/C.dir/xorll.c.o
+CMakeFiles/C.dir/src/xorll.c.o.provides.build: CMakeFiles/C.dir/src/xorll.c.o
+
+
+CMakeFiles/C.dir/src/circularlinkedlist.c.o: CMakeFiles/C.dir/flags.make
+CMakeFiles/C.dir/src/circularlinkedlist.c.o: ../src/circularlinkedlist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ady/DataStructures/C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/C.dir/src/circularlinkedlist.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C.dir/src/circularlinkedlist.c.o   -c /home/ady/DataStructures/C/src/circularlinkedlist.c
+
+CMakeFiles/C.dir/src/circularlinkedlist.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C.dir/src/circularlinkedlist.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ady/DataStructures/C/src/circularlinkedlist.c > CMakeFiles/C.dir/src/circularlinkedlist.c.i
+
+CMakeFiles/C.dir/src/circularlinkedlist.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C.dir/src/circularlinkedlist.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ady/DataStructures/C/src/circularlinkedlist.c -o CMakeFiles/C.dir/src/circularlinkedlist.c.s
+
+CMakeFiles/C.dir/src/circularlinkedlist.c.o.requires:
+
+.PHONY : CMakeFiles/C.dir/src/circularlinkedlist.c.o.requires
+
+CMakeFiles/C.dir/src/circularlinkedlist.c.o.provides: CMakeFiles/C.dir/src/circularlinkedlist.c.o.requires
+	$(MAKE) -f CMakeFiles/C.dir/build.make CMakeFiles/C.dir/src/circularlinkedlist.c.o.provides.build
+.PHONY : CMakeFiles/C.dir/src/circularlinkedlist.c.o.provides
+
+CMakeFiles/C.dir/src/circularlinkedlist.c.o.provides.build: CMakeFiles/C.dir/src/circularlinkedlist.c.o
 
 
 # Object files for target C
 C_OBJECTS = \
-"CMakeFiles/C.dir/xorll.c.o"
+"CMakeFiles/C.dir/src/xorll.c.o" \
+"CMakeFiles/C.dir/src/circularlinkedlist.c.o"
 
 # External object files for target C
 C_EXTERNAL_OBJECTS =
 
-C : CMakeFiles/C.dir/xorll.c.o
+C : CMakeFiles/C.dir/src/xorll.c.o
+C : CMakeFiles/C.dir/src/circularlinkedlist.c.o
 C : CMakeFiles/C.dir/build.make
 C : CMakeFiles/C.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ady/DataStructures/C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable C"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ady/DataStructures/C/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable C"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/C.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +125,8 @@ CMakeFiles/C.dir/build: C
 
 .PHONY : CMakeFiles/C.dir/build
 
-CMakeFiles/C.dir/requires: CMakeFiles/C.dir/xorll.c.o.requires
+CMakeFiles/C.dir/requires: CMakeFiles/C.dir/src/xorll.c.o.requires
+CMakeFiles/C.dir/requires: CMakeFiles/C.dir/src/circularlinkedlist.c.o.requires
 
 .PHONY : CMakeFiles/C.dir/requires
 

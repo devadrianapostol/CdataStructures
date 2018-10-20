@@ -14,7 +14,6 @@ callback printF(node* curr, int index){
     printf("Node %d --> %d       Previous: %d Next: %d\n ", index, curr->data, prevData, nextData);
 }
 
-
 enum {
     FORWARD = 1,
     BACKWARD = 2
@@ -26,6 +25,7 @@ int main(){
     node* list = create(1, NULL, NULL, &head);
     push(&list, 100, &head );
     push(&list, 1000, &head);
+    prepend(&list, 99, &head);
     traverse(list,FORWARD, &head, (callback) printF);
 
     return 0;
@@ -93,4 +93,14 @@ void traverse(node* list,int direction, node** head, callback f){
         }
         f(curr, ++c);
     }
+}
+
+void prepend(node **list, int data,node** head ){
+    node* temp = create(data, (*head)->previous, *list, head);
+    (*head)->previous->next = temp;
+    (*head)->previous = temp;
+    node* curr = *list;
+    curr->previous = temp;
+    *head = temp;
+    *list = temp;
 }

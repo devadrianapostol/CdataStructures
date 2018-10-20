@@ -19,11 +19,11 @@ node push(node **pNode, int data, node** head);
 
 void traverse(node* list,int direction, node** head, callback f);
 
-void prepend(node **pNode, int data);
+void prepend(node **list, int data,node** head );
 
-void display(node **pNode);
+void display(node **list);
 
-node *append(node **pNode, int data);
+node *append(node **list, int data);
 
 
 

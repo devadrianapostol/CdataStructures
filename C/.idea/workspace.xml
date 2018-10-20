@@ -12,37 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ca9bb1b-ae33-457f-a11c-e462920bb53f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt.bak" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/C" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/C" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/C.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/C.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/queue.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/xorll.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/C" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/src/circularlinkedlist.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/circularlinkedlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/circularlinkedlist.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/circularlinkedlist.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/circularlinkedlist.h" afterDir="false" />
     </list>
@@ -85,8 +56,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="54" />
-          <entry key="c" value="674" />
-          <entry key="h" value="43" />
+          <entry key="c" value="899" />
+          <entry key="h" value="68" />
           <entry key="m" value="21" />
           <entry key="txt" value="13" />
         </counts>
@@ -95,7 +66,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="10" />
           <entry key="Makefile" value="54" />
-          <entry key="ObjectiveC" value="738" />
+          <entry key="ObjectiveC" value="988" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -107,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/doublelinkedlist.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="48" />
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -115,11 +86,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doublelinkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="92" column="5" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+            <state relative-caret-position="273">
+              <caret line="121" column="18" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="18" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
-                <element signature="e#2620#2775#0" />
                 <element signature="e#2777#3092#0" />
                 <element signature="e#3094#3318#0" />
                 <element signature="e#3320#3697#0" />
@@ -150,11 +120,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+            <state relative-caret-position="92">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#40#58#0" expanded="true" />
+                <element signature="e#112#423#0" />
                 <element signature="e#164#217#0" />
+                <element signature="e#1419#1491#0" />
               </folding>
             </state>
           </provider>
@@ -164,7 +136,7 @@
         <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+              <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-end-line="21" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -341,12 +313,12 @@
       <workItem from="1539955658339" duration="722000" />
       <workItem from="1539956404074" duration="602000" />
       <workItem from="1540009988057" duration="31000" />
-      <workItem from="1540010062362" duration="3194000" />
+      <workItem from="1540010062362" duration="4256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44715000" />
+    <option name="totallyTimeSpent" value="45777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="32" y="0" width="1248" height="800" extended-state="6" />
@@ -433,18 +405,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
-          <line>80</line>
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
           <line>84</line>
           <option name="timeStamp" value="134" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
-          <line>68</line>
-          <option name="timeStamp" value="135" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
@@ -453,8 +415,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
-          <line>72</line>
-          <option name="timeStamp" value="137" />
+          <line>98</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
+          <line>104</line>
+          <option name="timeStamp" value="140" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -668,24 +635,23 @@
     <entry file="file://$PROJECT_DIR$/src/doublelinkedlist.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="48" />
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-end-line="21" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doublelinkedlist.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="92" column="5" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+        <state relative-caret-position="273">
+          <caret line="121" column="18" lean-forward="true" selection-start-line="118" selection-start-column="4" selection-end-line="121" selection-end-column="18" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
-            <element signature="e#2620#2775#0" />
             <element signature="e#2777#3092#0" />
             <element signature="e#3094#3318#0" />
             <element signature="e#3320#3697#0" />
@@ -705,11 +671,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+        <state relative-caret-position="92">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#40#58#0" expanded="true" />
+            <element signature="e#112#423#0" />
             <element signature="e#164#217#0" />
+            <element signature="e#1419#1491#0" />
           </folding>
         </state>
       </provider>

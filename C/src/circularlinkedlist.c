@@ -27,6 +27,11 @@ int main(){
     push(&list, 1000, &head);
     prepend(&list, 99, &head);
     traverse(list,FORWARD, &head, (callback) printF);
+    display(&list, &head);
+    append(&list->next, 19999, &head);
+    traverse(list,FORWARD, &head, (callback) printF);
+
+
 
     return 0;
 }
@@ -103,4 +108,27 @@ void prepend(node **list, int data,node** head ){
     curr->previous = temp;
     *head = temp;
     *list = temp;
+}
+
+void display(node **list, node** head){
+    node* curr = *list;
+    printf("Nodes:\n");
+    while(curr->next != *head){
+        printf("%d\n", curr->data);
+        curr=curr->next;
+    }
+    printf("%d\n", curr->data);
+}
+
+node *append(node **list, int data, node** head){
+    node* curr = *list;
+    while (curr != *head){
+        curr = curr->next;
+    }
+    if(curr == *head){
+        node* tmp = create(data, (*head)->previous, (*head), head);
+        (*head)->previous->next = tmp;
+        (*head)->previous = tmp;
+    }
+    return *list;
 }

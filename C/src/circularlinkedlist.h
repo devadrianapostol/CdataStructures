@@ -21,9 +21,9 @@ void traverse(node* list,int direction, node** head, callback f);
 
 void prepend(node **list, int data,node** head );
 
-void display(node **list);
+void display(node **list, node** head);
 
-node *append(node **list, int data);
+node *append(node **list, int data, node** head);
 
 
 

@@ -10,4 +10,4 @@ set(CMAKE_C_STANDARD 99)
 #binarySearchTree.c binarySearchTree.h
 #doublelinkedlist.c doublelinkedlist.h
 
-add_executable(C src/xorll.c src/xorll.h src/circularlinkedlist.c)
+add_executable(C src/circularlinkedlist src/circularlinkedlist.c)

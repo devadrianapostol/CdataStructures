@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/ady/DataStructures/C/xorll.c
-xorll.h
-/home/ady/DataStructures/C/xorll.h
+/home/ady/CdataStructures/C/src/circularlinkedlist.c
 stdio.h
 -
 stdlib.h
 -
-stdint.h
--
+circularlinkedlist.h
+/home/ady/CdataStructures/C/src/circularlinkedlist.h
 
-/home/ady/DataStructures/C/xorll.h
-stdint.h
--
+/home/ady/CdataStructures/C/src/circularlinkedlist.h
 

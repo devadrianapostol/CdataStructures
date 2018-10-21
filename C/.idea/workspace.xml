@@ -12,7 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ca9bb1b-ae33-457f-a11c-e462920bb53f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/C.dir/src/circularlinkedlist.c.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/circularlinkedlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/circularlinkedlist.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/circularlinkedlist.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/circularlinkedlist.h" afterDir="false" />
     </list>
@@ -40,6 +40,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="C (disassembly)" value="1" />
           <entry key="Makefile" value="1" />
           <entry key="c" value="1" />
           <entry key="h" value="1" />
@@ -50,6 +51,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
+          <entry key="Disassembly" value="1" />
           <entry key="JSON" value="2" />
           <entry key="ObjectiveC" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -58,8 +60,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="54" />
-          <entry key="c" value="1485" />
-          <entry key="h" value="163" />
+          <entry key="c" value="1840" />
+          <entry key="h" value="180" />
           <entry key="m" value="21" />
           <entry key="txt" value="13" />
         </counts>
@@ -68,7 +70,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="10" />
           <entry key="Makefile" value="54" />
-          <entry key="ObjectiveC" value="1669" />
+          <entry key="ObjectiveC" value="2041" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -88,14 +90,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doublelinkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="148" column="16" lean-forward="true" selection-start-line="139" selection-start-column="3" selection-end-line="148" selection-end-column="16" />
+            <state relative-caret-position="210">
+              <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="47" />
               <folding>
                 <element signature="e#39#57#0" expanded="true" />
                 <element signature="e#2191#2618#0" />
                 <element signature="e#2620#2775#0" />
+                <element signature="e#3094#3318#0" />
                 <element signature="e#3320#3697#0" />
-                <element signature="e#3699#4120#0" />
                 <element signature="e#4122#4273#0" />
                 <element signature="e#4275#4496#0" />
                 <element signature="e#4498#5429#0" />
@@ -121,14 +123,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            <state relative-caret-position="195">
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
                 <element signature="e#40#58#0" expanded="true" />
                 <element signature="e#112#423#0" />
                 <element signature="e#2246#2513#0" />
                 <element signature="e#2515#2735#0" />
-                <element signature="e#2737#3059#0" />
                 <element signature="e#3061#3226#0" />
                 <element signature="e#3292#3366#0" />
               </folding>
@@ -139,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="240">
+              <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-end-line="31" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -322,12 +323,12 @@
       <workItem from="1540010062362" duration="4337000" />
       <workItem from="1540037371083" duration="1523000" />
       <workItem from="1540093127863" duration="104000" />
-      <workItem from="1540093370177" duration="1596000" />
+      <workItem from="1540093370177" duration="2666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49081000" />
+    <option name="totallyTimeSpent" value="50151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="32" y="0" width="1248" height="800" extended-state="6" />
@@ -413,14 +414,39 @@
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
-          <line>133</line>
-          <option name="timeStamp" value="138" />
+          <url>file://$PROJECT_DIR$/src/doublelinkedlist.c</url>
+          <line>138</line>
+          <option name="timeStamp" value="141" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
-          <line>128</line>
-          <option name="timeStamp" value="139" />
+          <line>177</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
+          <line>176</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
+          <line>32</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
+          <line>159</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
+          <line>160</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/circularlinkedlist.c</url>
+          <line>168</line>
+          <option name="timeStamp" value="150" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -640,21 +666,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="46" />
+        <state relative-caret-position="240">
+          <caret line="31" column="67" lean-forward="true" selection-start-line="31" selection-end-line="31" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doublelinkedlist.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="148" column="16" lean-forward="true" selection-start-line="139" selection-start-column="3" selection-end-line="148" selection-end-column="16" />
+        <state relative-caret-position="210">
+          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="47" />
           <folding>
             <element signature="e#39#57#0" expanded="true" />
             <element signature="e#2191#2618#0" />
             <element signature="e#2620#2775#0" />
+            <element signature="e#3094#3318#0" />
             <element signature="e#3320#3697#0" />
-            <element signature="e#3699#4120#0" />
             <element signature="e#4122#4273#0" />
             <element signature="e#4275#4496#0" />
             <element signature="e#4498#5429#0" />
@@ -669,14 +695,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/circularlinkedlist.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        <state relative-caret-position="195">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
           <folding>
             <element signature="e#40#58#0" expanded="true" />
             <element signature="e#112#423#0" />
             <element signature="e#2246#2513#0" />
             <element signature="e#2515#2735#0" />
-            <element signature="e#2737#3059#0" />
             <element signature="e#3061#3226#0" />
             <element signature="e#3292#3366#0" />
           </folding>

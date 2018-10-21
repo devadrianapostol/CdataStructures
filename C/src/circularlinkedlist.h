@@ -29,7 +29,7 @@ int count(node *list, node** head);
 
 node* insert_after(node **list, int data, node* prev, node** head);
 
-node* insert_before(node **head, int data, node* prev);
+node* insert_before(node **list, int data, node* prev, node** head);
 
 node* getNode(node** list, int i, node** head);
 

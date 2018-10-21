@@ -19,6 +19,8 @@ enum {
     BACKWARD = 2
 };
 
+#define TOFIND 2
+
 int main(){
     node* head =  NULL;
 
@@ -34,6 +36,14 @@ int main(){
     traverse(list,FORWARD, &head, (callback) printF);
 
     printf("Nr of nodes: %d\n", count(list, &head));
+
+    node* found = search(&list, TOFIND, &head);
+
+    if( found != NULL ) {
+        printf("Search for %d: %d\n", TOFIND, found->data );
+    } else {
+        printf("Node with data: %d not found",TOFIND );
+    }
 
     return 0;
 }
@@ -182,4 +192,18 @@ node* insert_before(node **list, int data, node* prev, node** head){
     }
     return *list;
 
+}
+
+node* search(node** list, int data, node** head){
+    node* curr = *list;
+    if((*head)->data == data) return *head;
+    while (curr->next != *head){
+        if(curr->data == data){
+            return curr;
+        }
+        curr = curr->next;
+    }
+    if(curr->data == data) return curr;
+    free(curr);
+    return NULL;
 }

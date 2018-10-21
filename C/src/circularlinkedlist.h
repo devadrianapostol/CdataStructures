@@ -33,7 +33,7 @@ node* insert_before(node **list, int data, node* prev, node** head);
 
 node* getNode(node** list, int i, node** head);
 
-node* search(node** head, int data);
+node* search(node** list, int data, node** head);
 
 node* insertion_sort(node **head);
 

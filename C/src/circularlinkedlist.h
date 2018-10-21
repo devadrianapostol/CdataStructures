@@ -25,15 +25,13 @@ void display(node **list, node** head);
 
 node *append(node **list, int data, node** head);
 
+int count(node *list, node** head);
 
-
-int count(node *pNode);
-
-node* insert_after(node **head, int data, node* prev);
+node* insert_after(node **list, int data, node* prev, node** head);
 
 node* insert_before(node **head, int data, node* prev);
 
-node* getNode(node** pNode, int i);
+node* getNode(node** list, int i, node** head);
 
 node* search(node** head, int data);
 

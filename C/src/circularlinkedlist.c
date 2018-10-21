@@ -29,9 +29,10 @@ int main(){
     traverse(list,FORWARD, &head, (callback) printF);
     display(&list, &head);
     append(&list->next, 19999, &head);
+    insert_after(&list, 2, getNode(&list, 5, &head), &head );
     traverse(list,FORWARD, &head, (callback) printF);
 
-
+    printf("Nr of nodes: %d\n", count(list, &head));
 
     return 0;
 }
@@ -131,4 +132,39 @@ node *append(node **list, int data, node** head){
         (*head)->previous = tmp;
     }
     return *list;
+}
+
+int count(node *list, node** head){
+    node* curr = list;
+    int c = 0;
+    while (curr->next != *head){
+        c++;
+        curr = curr->next;
+    }
+    c++;
+    return c;
+}
+
+node* insert_after(node **list, int data, node* prev, node** head){
+     node* newNode = create(data, prev, prev->next, head );
+     prev->next->previous = newNode;
+     prev->next = newNode;
+
+     return list;
+}
+
+node* getNode(node** list, int i, node** head){
+    node* curr = *list;
+    int c = 0;
+    while (curr->next != *head){
+        if(c == i){
+            return curr;
+        }
+        c++;
+
+        curr = curr->next;
+    }
+    c++;
+    if(c == i) return  curr;
+    return NULL;
 }

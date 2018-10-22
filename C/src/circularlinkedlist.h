@@ -37,7 +37,7 @@ node* search(node** list, int data, node** head);
 
 node* insertion_sort(node **head);
 
-node* reverse(node** head);
+node * reverse(node** list, node** head);
 
 node* remove_front(node **head);
 

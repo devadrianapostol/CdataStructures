@@ -45,6 +45,9 @@ int main(){
         printf("Node with data: %d not found",TOFIND );
     }
 
+    list = reverse(&list, &head);
+    traverse(list,FORWARD, &head, (callback) printF);
+
     return 0;
 }
 
@@ -207,3 +210,20 @@ node* search(node** list, int data, node** head){
     free(curr);
     return NULL;
 }
+
+node * reverse(node** list, node** head){
+    node* curr;
+    node* newList;
+    curr = *list;
+    newList = NULL;
+    while(curr->next != *head){
+        if(newList == NULL){
+            newList = create(curr->data, NULL, NULL, head);
+            head = &newList;
+        } else {
+            prepend(&newList,curr->data, head);
+        }
+    }
+    return newList;
+}
+

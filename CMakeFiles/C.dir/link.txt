@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/C.dir/src/circularlinkedlist.c.o  -o C 

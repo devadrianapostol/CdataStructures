@@ -35,16 +35,16 @@ node* getNode(node** list, int i, node** head);
 
 node* search(node** list, int data, node** head);
 
-node* insertion_sort(node **head);
-
 node * reverse(node** list, node** head);
 
-node* remove_front(node **head);
+node* remove_front(node **list, node** head);
 
-node* remove_back(node **head);
+node* remove_back(node** list, node** head);
 
-node* remove_any(node **head, node* nd);
+node* remove_any(node **list, node* nd, node** head);
 
-void dispose(node *list);
+void dispose(node *list, node** head);
+
+node* insertion_sort(node **head);
 
 #endif //C_CIRCULARLINKEDLIST_H

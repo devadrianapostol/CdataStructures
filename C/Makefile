@@ -24,6 +24,5 @@ binarySearchTree: src/binarySearchTree.h src/binarySearchTree.c
 queue: src/queue.c
 	gcc -o dist/queue queue.c
 
-
 clean:
 	rm dist/*

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/ady/DataStructures/C/src/circularlinkedlist.c" "/home/ady/DataStructures/C/cmake-build-debug/CMakeFiles/C.dir/src/circularlinkedlist.c.o"
+  "/home/ady/DataStructures/C/src/circularlinkedlist.c" "/home/ady/DataStructures/CMakeFiles/C.dir/src/circularlinkedlist.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -45,9 +45,24 @@ int main(){
         printf("Node with data: %d not found",TOFIND );
     }
 
+    printf("reverse...");
     list = reverse(&list, &head);
     traverse(list,FORWARD, &head, (callback) printF);
 
+    printf("remove front...\n");
+    remove_front(&list, &head);
+    traverse(list,FORWARD, &head, (callback) printF);
+
+    printf("remove back...\n");
+    remove_back(&list, &head);
+    traverse(list,FORWARD, &head, (callback) printF);
+
+    printf("remove any...\n");
+    remove_any(&list, getNode(&list, 3, &head), &head );
+    traverse(list,FORWARD, &head, (callback) printF);
+
+    dispose(list, &head);
+    free(head);
     return 0;
 }
 
@@ -216,14 +231,80 @@ node * reverse(node** list, node** head){
     node* newList;
     curr = *list;
     newList = NULL;
+    node* newHead;
+
     while(curr->next != *head){
         if(newList == NULL){
             newList = create(curr->data, NULL, NULL, head);
-            head = &newList;
+            newHead = newList;
         } else {
-            prepend(&newList,curr->data, head);
+            prepend(&newList,curr->data, &newHead);
         }
+        curr = curr->next;
     }
+    prepend(&newList,curr->data, &newHead);
+
+    *head = newHead;
     return newList;
 }
+
+node *remove_front(node **list, node **head) {
+    if(*list == NULL) return NULL;
+    *list = (*list)->next;
+    (*list)->previous = (*list)->previous->previous;
+    (*list)->previous->next = (*list);
+    *head = *list;
+    return *list;
+}
+
+node *remove_back(node **list, node **head) {
+    node* tmp = (*head)->previous;
+    (*head)->previous = (*head)->previous->previous;
+    (*head)->previous->next = *head;
+    free(tmp);
+    return *list;
+}
+
+void dispose(node *list, node **head) {
+    node *curr, *temp;
+    curr = list;
+    if(list != NULL){
+        curr = curr->next;
+        list->previous = NULL;
+        list->next = NULL;
+        while(curr != *head ){
+            temp = curr->next;
+            free(curr);
+            curr = temp;
+        }
+
+    }
+}
+
+
+//TODO : WIP
+node *remove_any(node **list, node *nd, node **head) {
+    if(*list == nd){
+        *list = nd->next;
+        nd->previous = NULL;
+        return *list;
+    }
+
+    if(nd->next == NULL) return remove_back(list, head);
+    node* curr = *list;
+    while(curr->next != *head){
+        if(curr->next == nd) break;
+        curr = curr->next;
+    }
+    if(curr->next != *head ){
+        // curr->next is to be removed
+        node* tmp = curr->next;
+        curr->next = tmp->next;
+        if(curr->next != NULL ) curr->next->previous = curr;
+        tmp->next = NULL;
+        free(tmp);
+    }
+    return *list;
+}
+
 

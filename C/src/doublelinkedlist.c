@@ -294,15 +294,15 @@ node* remove_front(node **head){
     return *head;
 }
 
-node* remove_any(node **head, node* nd){
-    if(*head == nd){
-        *head = nd->next;
+node* remove_any(node **list, node* nd){
+    if(*list == nd){
+        *list = nd->next;
         nd->previous = NULL;
-        return *head;
+        return *list;
     }
 
-    if(nd->next == NULL) return remove_back(head);
-    node* curr = *head;
+    if(nd->next == NULL) return remove_back(list);
+    node* curr = *list;
     while(curr != NULL){
         if(curr->next == nd) break;
         curr = curr->next;
@@ -315,7 +315,7 @@ node* remove_any(node **head, node* nd){
         tmp->next = NULL;
         free(tmp);
     }
-    return *head;
+    return *list;
 }
 
 void display(node **pNode) {

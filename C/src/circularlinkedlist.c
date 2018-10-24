@@ -19,7 +19,7 @@ enum {
     BACKWARD = 2
 };
 
-#define TOFIND 2
+#define TOFIND 3
 
 int main(){
     node* head =  NULL;
@@ -57,7 +57,7 @@ int main(){
     remove_back(&list, &head);
     traverse(list,FORWARD, &head, (callback) printF);
 
-    printf("remove any...\n");
+    printf("remove any... node 3: 100 \n");
     remove_any(&list, getNode(&list, 3, &head), &head );
     traverse(list,FORWARD, &head, (callback) printF);
 
@@ -184,7 +184,7 @@ node* insert_after(node **list, int data, node* prev, node** head){
 
 node* getNode(node** list, int i, node** head){
     node* curr = *list;
-    int c = 0;
+    int c = 1;
     while (curr->next != *head){
         if(c == i){
             return curr;
@@ -281,30 +281,33 @@ void dispose(node *list, node **head) {
     }
 }
 
-
 //TODO : WIP
 node *remove_any(node **list, node *nd, node **head) {
-    if(*list == nd){
+    if(*head == nd){
         *list = nd->next;
+        (*list)->previous = nd->previous;
+        (*list)->previous->next = *list;
+        *head = *list;
         nd->previous = NULL;
         return *list;
     }
 
-    if(nd->next == NULL) return remove_back(list, head);
+    if(nd->next == *head) return remove_back(list, head);
+
     node* curr = *list;
     while(curr->next != *head){
         if(curr->next == nd) break;
         curr = curr->next;
     }
+
     if(curr->next != *head ){
+
         // curr->next is to be removed
         node* tmp = curr->next;
         curr->next = tmp->next;
-        if(curr->next != NULL ) curr->next->previous = curr;
+        if(curr->next != *head ) curr->next->previous = curr;
         tmp->next = NULL;
         free(tmp);
     }
     return *list;
 }
-
-

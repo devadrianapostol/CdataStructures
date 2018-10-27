@@ -45,7 +45,12 @@ int main(){
         printf("Node with data: %d not found",TOFIND );
     }
 
-    printf("reverse...");
+    printf("insertion sort...\n");
+    list = insertion_sort(&list, &head);
+    traverse(list,FORWARD, &head, (callback) printF);
+
+
+    /*printf("reverse...");
     list = reverse(&list, &head);
     traverse(list,FORWARD, &head, (callback) printF);
 
@@ -58,8 +63,8 @@ int main(){
     traverse(list,FORWARD, &head, (callback) printF);
 
     printf("remove any... node 3: 100 \n");
-    remove_any(&list, getNode(&list, 3, &head), &head );
-    traverse(list,FORWARD, &head, (callback) printF);
+    remove_any(&list, getNode(&list, 2, &head), &head );
+    traverse(list,FORWARD, &head, (callback) printF);*/
 
     dispose(list, &head);
     free(head);
@@ -281,7 +286,6 @@ void dispose(node *list, node **head) {
     }
 }
 
-//TODO : WIP
 node *remove_any(node **list, node *nd, node **head) {
     if(*head == nd){
         *list = nd->next;
@@ -310,4 +314,53 @@ node *remove_any(node **list, node *nd, node **head) {
         free(tmp);
     }
     return *list;
+}
+
+node* insertion_sort(node** list, node** head){
+    node* oldHead = *head;
+    node* curr = *head;
+    node* e;
+    node* temp;
+    *head = NULL;
+
+    while (curr->next != oldHead){
+        e = curr;
+        curr=curr->next;
+        if(*head != NULL){
+            node* hdata = *head;
+            //TODO : losing last node
+            if(e->data > (*head)->data ){
+                temp = *head;
+
+                while( (temp->next != (*head)) && (e->data > temp->next->data)){
+                    temp = temp->next;
+                }
+
+                e->next = temp->next;
+                e->previous = temp;
+
+                temp->next = e;
+
+                e->next->previous = e;
+                //if(e->next != (*head)) e->next->previous = e;
+
+
+            } else {
+                // e->data < hdata->data - prepend to head
+                e->previous = (*head)->previous;
+                e->previous->next = e;
+                (*head)->previous = e;
+                e->next = (*head);
+                *head = e;
+
+            }
+        } else {
+            e->next = e;
+            e->previous = e;
+            *head = e;
+        }
+    }
+    free(curr);
+
+    return *head;
 }

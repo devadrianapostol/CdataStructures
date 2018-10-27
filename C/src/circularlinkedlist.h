@@ -41,10 +41,10 @@ node* remove_front(node **list, node** head);
 
 node* remove_back(node** list, node** head);
 
-node* remove_any(node **list, node* nd, node** head);
+node* remove_any(node** list, node* nd, node** head);
 
-void dispose(node *list, node** head);
+void dispose(node* list, node** head);
 
-node* insertion_sort(node **head);
+node* insertion_sort(node** list, node** head);
 
 #endif //C_CIRCULARLINKEDLIST_H
